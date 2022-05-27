@@ -1,0 +1,1 @@
+const squareGrid = document.querySelector('#squareGrid');
