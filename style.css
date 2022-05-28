@@ -1,0 +1,10 @@
+
+#container {
+    display: flex;
+}
+
+.squareDiv {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
