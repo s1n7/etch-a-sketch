@@ -11,3 +11,10 @@ for(let j = 0; j < 16; j++){
         colDiv.appendChild(squareDiv);
     }
 }
+
+const squareDivs = document.querySelectorAll('.squareDiv');
+squareDivs.forEach(squareDiv => {squareDiv.addEventListener('mouseenter', changeColor)});
+
+function changeColor (e) {
+    e.target.style.backgroundColor = 'purple';
+}
