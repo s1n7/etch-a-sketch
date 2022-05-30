@@ -3,6 +3,10 @@
     display: flex;
 }
 
+.colDiv {
+    display: flex;
+}
+
 .squareDiv {
     background-color: blue;
     width: 50px;
