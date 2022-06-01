@@ -1,6 +1,8 @@
 
 #container {
     display: flex;
+    width: 720px;
+    height: auto;
 }
 
 .colDiv {
@@ -8,7 +10,5 @@
 }
 
 .squareDiv {
-    background-color: blue;
-    width: 50px;
-    height: 50px;
+    background-color: rgb(178, 178, 255);
 }
