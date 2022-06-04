@@ -1,12 +1,13 @@
 const container = document.querySelector('#container');
 
-const customSize = prompt('Please enter the grid size', 4);
+const customSize = prompt('Please enter the grid size', 16);
 const gridSize = customSize;
 const squareDivSize = 720/gridSize;
 
 const reloadButton = document.createElement('button');
 reloadButton.setAttribute('onClick', 'window.location.reload();');
 reloadButton.textContent = 'Reload';
+const reloadDiv = document.querySelector('#reload');
 
 const failDiv = document.querySelector('#fail');
 const failedInput = document.createElement('p');
@@ -17,18 +18,20 @@ function checkInput() {
         failedInput.textContent = 'Please enter an integer value.';
         failDiv.appendChild(failedInput);
         failDiv.appendChild(reloadButton);
+        return false;
     } else if (customSize < 1) {
         failedInput.textContent = 'Please enter a value greater than 0.';
         failDiv.appendChild(failedInput);
         failDiv.appendChild(reloadButton);
+        return false;
     } else if (customSize > 100) {
         failedInput.textContent = 'Please enter a value smaller than or equal to 100.';
         failDiv.appendChild(failedInput);
         failDiv.appendChild(reloadButton);
+        return false;
     } else {
-        return;
+        return true;
     }
-    return;
 }
 
 
@@ -51,11 +54,14 @@ function draw() {
     function changeColor (e) {
         e.target.style.backgroundColor = 'purple';
     }
+
+    reloadDiv.appendChild(reloadButton);
 }
 
 function playGame() {
-    checkInput();
-    draw();
+    if(checkInput()){
+        draw();
+    }
 }
 
 playGame();
