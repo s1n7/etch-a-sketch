@@ -13,6 +13,8 @@ h1 {
     display: flex;
     width: 720px;
     height: auto;
+    border-style: ridge;
+    border-width: 3px;
 }
 
 .colDiv {
@@ -20,7 +22,7 @@ h1 {
 }
 
 .squareDiv {
-    background-color: rgb(178, 178, 255);
+    background-color: rgb(206, 206, 206);
 }
 
 #reload {

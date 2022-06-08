@@ -59,7 +59,7 @@ function draw() {
     
     //function to change color
     function changeColor (e) {
-        e.target.style.backgroundColor = 'purple';
+        e.target.style.backgroundColor = 'rgb(0, 0, 0)';
     }
     //add reload button
     reloadDiv.appendChild(reloadButton);
